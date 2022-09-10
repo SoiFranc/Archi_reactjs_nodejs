@@ -1,0 +1,27 @@
+{
+  "name": "000-org_reactjs_nodejs",
+  "version": "1.0.0",
+  "description": "Architecture Project en ReactJS + NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "client": "cd client && npm start",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "build": "cd client && npm run build"
+  },
+  "engines": {
+    "node": "16.17.x"
+  },
+  "author": "SoiFranc",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "heroku": "^7.63.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
