@@ -12,7 +12,7 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "build": "cd client && npm run build",
     "predeploy": "cd client && npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "cd client && gh-pages -d build"
   },
   "engines": {
     "node": "16.17.x"
