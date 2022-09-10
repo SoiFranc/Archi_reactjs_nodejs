@@ -1,16 +1,18 @@
 {
-  "homepage": "https://SoiFranc.github.io/Archi_reactjs_nodejs",
   "name": "000-org_reactjs_nodejs",
   "version": "1.0.0",
   "description": "Architecture Project en ReactJS + NodeJS",
   "main": "server.js",
+  "homepage": "https://SoiFranc.github.io/Archi_reactjs_nodejs",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
     "client": "cd client && npm start",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "gh-pages -d npm run install-client && npm run build",
-    "build": "cd client && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "build": "cd client && npm run build",
+    "predeploy": "cd client && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": "16.17.x"
