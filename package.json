@@ -9,8 +9,9 @@
     "watch": "nodemon server.js",
     "client": "cd client && npm start",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
     "build": "cd client && npm run build",
+    "postbuild": "npm run install-client && npm run build && cd client && gh-pages -d build",
+
     "predeploy": "cd client && npm run build",
     "deploy": "cd client && gh-pages -d build"
   },
