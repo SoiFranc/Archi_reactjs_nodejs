@@ -10,7 +10,7 @@
     "client": "cd client && npm start",
     "install-client": "cd client && npm install",
     "build": "cd client && npm run build",
-    "deploy": "npm run install-client && npm run build && gh-pages -d build"
+    "deploy": "npm run install-client && npm run build && cd client && gh-pages -d build"
   },
   "engines": {
     "node": "16.17.x"
